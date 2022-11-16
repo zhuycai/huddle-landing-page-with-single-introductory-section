@@ -1,0 +1,203 @@
+:root {
+    --violet: hsl(257, 40%, 49%);
+    --soft-magenta: hsl(300, 69%, 71%);
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    background: url('../images/bg-mobile.svg') no-repeat top center/100%;
+    background-color: var(--violet);
+}
+
+.wrapper {
+    min-width: 375px;
+    max-width: 1225px;
+    padding: 2em;
+    margin: 0 auto;
+}
+
+.header {
+    font-family: Poppins, sans-serif;
+}
+
+.header_logo {
+    width: 10em;
+}
+
+.main {
+    display: grid;
+    margin-top: 3.4em;
+    margin-bottom: 5em;
+    text-align: center;
+
+}
+
+.header_title {
+    position: absolute;
+    left: -99999999999px;
+}
+
+.main_intro {
+    margin-top: 4em;
+    line-height: 1.6em;
+    color: rgb(238, 234, 234);
+}
+
+.main_title {
+    font-size: 1.6em;
+    line-height: 1.6em;
+    color: white;
+}
+
+.main_registerBtn {
+    display: block;
+    width: 215px;
+    height: 2.8em;
+    margin: 2em auto;
+    border-radius: 1.4em;
+    box-shadow: 0 .4em 1em 0 rgba(66, 6, 94, 0.63);
+    text-align: center;
+    line-height: 2.8em;
+    color: var(--violet);
+    background: white;
+}
+
+.main_registerBtn:hover {
+    color: white;
+    background: var(--soft-magenta);
+}
+
+.main_links {
+    display: flex;
+    justify-content: center;
+    gap: .6em;
+    margin-top: 4em;
+}
+
+.main_linksIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2em;
+    height: 2em;
+    border: 1px solid white;
+    border-radius: 50%;
+    color: white;
+}
+
+.main_linksIcon:hover {
+    border-color: var(--soft-magenta);
+    color: var(--soft-magenta);
+}
+
+.footer {
+    color: white;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(202, 28%, 71%);
+}
+
+@media (min-width: 960px) {
+    body {
+        background: url(../images/bg-desktop.svg) no-repeat top center/100%;
+        background-color: var(--violet);
+    }
+
+    .main {
+        grid-template-columns: 1.4fr 1fr;
+        column-gap: 2.6em;
+    }
+
+    .main_intro {
+        margin-top: 1em;
+        text-align: left;
+    }
+
+    .main_title {
+        font-size: 1.8em;
+    }
+
+    .main_registerBtn{
+        margin: 2em 0;
+    }
+
+    .main_links {
+        justify-content: flex-end;
+        margin-top: 10em;
+    }
+
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?1z24p5');
+    src:  url('../fonts/icomoon.eot?1z24p5#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?1z24p5') format('truetype'),
+      url('../fonts/icomoon.woff?1z24p5') format('woff'),
+      url('../fonts/icomoon.svg?1z24p5#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  .icon {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    /* speak: never; */
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    
+    /* Enable Ligatures ================ */
+    letter-spacing: 0;
+    -webkit-font-feature-settings: "liga";
+    -moz-font-feature-settings: "liga=1";
+    -moz-font-feature-settings: "liga";
+    -ms-font-feature-settings: "liga" 1;
+    font-feature-settings: "liga";
+    -webkit-font-variant-ligatures: discretionary-ligatures;
+    font-variant-ligatures: discretionary-ligatures;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-facebook:before {
+    content: "\ea90";
+  }
+  .icon-instagram:before {
+    content: "\ea92";
+  }
+  .icon-twitter:before {
+    content: "\ea96";
+  }
+  
